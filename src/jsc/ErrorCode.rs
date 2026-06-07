@@ -711,9 +711,11 @@ impl ErrorCode {
     pub const FS_CP_SYMLINK_TO_SUBDIRECTORY: ErrorCode = ErrorCode(326);
     /// `ERR_DIR_CONCURRENT_OPERATION` (instanceof Error)
     pub const DIR_CONCURRENT_OPERATION: ErrorCode = ErrorCode(327);
+    /// `ERR_IMPORT_ATTRIBUTE_UNSUPPORTED` (instanceof TypeError)
+    pub const IMPORT_ATTRIBUTE_UNSUPPORTED: ErrorCode = ErrorCode(328);
 
     /// == C++ `NODE_ERROR_COUNT`.
-    pub const COUNT: u16 = 328;
+    pub const COUNT: u16 = 329;
 }
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -855,6 +857,7 @@ impl ErrorCode {
     pub const ERR_HTTP2_UNSUPPORTED_PROTOCOL: ErrorCode = ErrorCode::HTTP2_UNSUPPORTED_PROTOCOL;
     pub const ERR_HTTP2_INVALID_SETTING_VALUE: ErrorCode = ErrorCode::HTTP2_INVALID_SETTING_VALUE;
     pub const ERR_ILLEGAL_CONSTRUCTOR: ErrorCode = ErrorCode::ILLEGAL_CONSTRUCTOR;
+    pub const ERR_IMPORT_ATTRIBUTE_UNSUPPORTED: ErrorCode = ErrorCode::IMPORT_ATTRIBUTE_UNSUPPORTED;
     pub const ERR_INCOMPATIBLE_OPTION_PAIR: ErrorCode = ErrorCode::INCOMPATIBLE_OPTION_PAIR;
     pub const ERR_INVALID_ADDRESS: ErrorCode = ErrorCode::INVALID_ADDRESS;
     pub const ERR_INVALID_ADDRESS_FAMILY: ErrorCode = ErrorCode::INVALID_ADDRESS_FAMILY;
@@ -1429,6 +1432,7 @@ static CODE_STR: [&str; ErrorCode::COUNT as usize] = [
     "ERR_FS_CP_EEXIST",
     "ERR_FS_CP_SYMLINK_TO_SUBDIRECTORY",
     "ERR_DIR_CONCURRENT_OPERATION",
+    "ERR_IMPORT_ATTRIBUTE_UNSUPPORTED",
 ];
 
 // ──────────────────────────────────────────────────────────────────────────
